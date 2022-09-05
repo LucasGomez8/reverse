@@ -1,0 +1,43 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+
+    .nav-item__logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        h2{
+            >*{
+                text-decoration: none;
+                color: black
+            }
+        }
+        >*{
+            margin-right: 50px;
+        }
+
+        input[type=text]{
+            width: 250px;
+            height: 25px;
+        }
+    }
+
+
+    .nav-ul__list{
+        display: flex;
+        justify-content: space-around;
+        width: 300px;
+        align-items: center;
+        list-style: none;
+        li{
+            margin-top: 8px;
+            >*{
+                text-decoration: none;
+                color: black;
+        }
+       }
+    }
+}

@@ -1,0 +1,88 @@
+.register-container{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url("../img/home.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+    .registerform{
+        display: flex;
+        background: #fff;
+        border-radius: 20px;
+        overflow-x: hidden;
+        .form-divider{
+            padding: 20px 80px;
+            .form-item{
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                margin-top: 15px;
+
+                label{
+                    font-size: 20px;
+                }
+
+                input{
+                    width: 300px;
+                    height: 20px;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                }
+
+
+            }
+            button{
+                margin-top: 20px;
+                border-radius: 10px;
+                border: none;
+                width: 150px;
+                height: 40px;
+                >*{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+
+        }
+
+        .form-divider-right{
+            background: url("../img/login-submenu.jpg") no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 0 10px;
+            
+            .form-divider-rigth__box{
+                
+                h1{
+                    color: white;
+                    text-shadow: 1px 1px 1px black;
+                    margin-top: 100px;
+                    
+                }
+
+                p{
+                    color: white;
+                }
+
+                button{
+                    margin-top: 100px;
+                    border-radius: 10px;
+                    border: nonoe;
+                    width: 150px;
+                    height: 40px;
+                    >*{
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+
+}
