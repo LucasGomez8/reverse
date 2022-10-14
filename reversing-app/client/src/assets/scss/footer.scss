@@ -1,0 +1,9 @@
+.footer-container{
+    display: flex;
+    justify-content: center;
+    background: #000;
+    text-align: center;
+    >*{
+        color: white;
+    }
+}

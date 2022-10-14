@@ -5,14 +5,12 @@ import Footer from '../components/Footer';
 export default function Layout(props) {
     const {children} = props;
   return (
-    <div>
-        <div style={{height: "0vh"}}>
-            <Navbar></Navbar>
-            <div style={{height: "90vh"}}>
-             {children}
-            </div>
-            <Footer></Footer>
+    <div style={{minHeight: "100vh"}}>
+      <Navbar></Navbar>
+        <div style={{minHeight: "100vh"}}>
+          {children}
         </div>
+          <Footer></Footer>
     </div>
   )
 }

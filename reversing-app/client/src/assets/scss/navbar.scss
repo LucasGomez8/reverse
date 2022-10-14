@@ -1,0 +1,56 @@
+@import "../scss/globalvariables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: linear-gradient(to bottom, $purple, $dark-purple);
+
+    .nav-item__logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        h2{
+            >*{
+                text-decoration: none;
+                color: white;
+                font-family: 'Courgette', cursive;
+            }
+        }
+        >*{
+            margin-right: 50px;
+        }
+
+        input[type=text]{
+            width: 250px;
+            height: 25px;
+        }
+    }
+
+
+    .nav-ul__list{
+        display: flex;
+        justify-content: space-around;
+        width: 300px;
+        align-items: center;
+        list-style: none;
+        li{
+            margin-top: 8px;
+
+            button{
+                color: $black;
+            }
+
+            >*{
+                text-decoration: none;
+                color: white;
+        }
+
+        .nav-icon{
+            vertical-align: bottom;
+            font-size: 18px !important;
+        }
+       }
+    }
+}

@@ -1,20 +1,36 @@
 import React, { useState } from 'react'
 import {Link} from "react-router-dom";
-import "../assets/css/home.scss";
+import HomeLogin from './HomeLogin';
+import "../assets/scss/home.scss";
 
 import { useEffect } from 'react';
 import { useUser } from "../context/UserContext.jsx";
 
 export default function Home() {
 
-  const {getUsers, user} = useUser();
+  const {getAllPost, isLogin, createPost} = useUser();
 
-  useEffect(()=>{
-    getUsers();
+  const [post, setPost] = useState([]);
+
+  useEffect(() => {
+    const fetching = async() => {
+      
+      const result = await getAllPost();
+        setPost(result);
+    }
+
+    fetching();
   },[])
   
-  console.log(user);
 
+  const updatePosts = async (postValues) => {
+    const res = await createPost(postValues);
+    let updatedPost = [...post];
+    updatedPost.unshift(res[0]);
+    setPost(updatedPost);
+  }
+
+  if(isLogin != true) {
   return(
     <div className='home-container'>
       <div className='home-start'>
@@ -31,5 +47,10 @@ export default function Home() {
         </div>
       </div>
     </div>
-  )
+  )}
+  else{
+    return (
+      <HomeLogin post={post} updatePosts={updatePosts}></HomeLogin>
+    )
+  }
 }

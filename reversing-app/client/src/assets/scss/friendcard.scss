@@ -1,0 +1,36 @@
+.card-container{
+    text-align: center;
+    margin-top: auto;
+
+    .imagen > .banner{
+        width: 100%;
+        height: 120px;
+        border-radius: 10px 0 0 0;
+    }
+
+    .imagen > .photo {
+        width: 80px;
+        margin-top: -45px;
+        border-radius: 50%;
+        background: #fff;
+        border: 1px solid lightgrey;
+    }
+
+    p{
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    button{
+        border: none;
+        border-radius: 5px;
+        width: 100px;
+        height: 39px;
+        background: linear-gradient(to top,#214E34, #0EAD69);
+        color: white;
+
+        &:active{
+            background: linear-gradient(to bottom,#214E34, #0EAD69);
+        }
+    }
+}
