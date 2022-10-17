@@ -25,6 +25,7 @@ export default function HomeLogin({post, updatePosts}) {
 
   const postSender = () => {
     updatePosts(post_x_user);
+    document.getElementById("post-input__target").value = "";
   }
 
   return (
